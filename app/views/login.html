@@ -1,0 +1,20 @@
+<form role="form" ng-submit="loginSubmit()">
+    <fieldset>
+        <legend class="text-center"> Please Sign In </legend>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <input class="form-control" ng-model="username" placeholder="E-mail" name="email" type="email" autofocus id="user_email" required="">
+        </div>
+        <br/>
+        <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+            <input class="form-control" ng-model="password" placeholder="Password" id="password" name="password" type="password" value="" required="">
+        </div>
+        <div class="checkbox">
+            <div class="userError login-error">{{ loginErrorMessage }}</div>
+        </div>
+        <!--  Change this to a button or input when using this as a form -->
+        <button type="submit" value="Login" class="btn btn-lg btn-success btn-block" id="login-btn" >Login</button>
+        
+    </fieldset>
+</form>
