@@ -67,7 +67,8 @@ Seedbase.controller('HomeController', function ($scope,homeService,$cookieStore)
     }
     $scope.submitUser = function(){
         console.log("Added");
-        console.log($('#userForm').serialize());
+        //console.log($('#userForm').serialize());
+        //console.log($("form").serialize());
         homeService.addUser($cookieStore.get('userId')).
                 success(function(data,status,headers,config){
                    // location.reload();

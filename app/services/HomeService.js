@@ -33,13 +33,15 @@ angular.module('HomeService', ['ngCookies']).
                 })
             },
             addUser: function(hash){
-                console.log($('#userForm').serialize());
+                //console.log($('#userForm').serialize());
+                var username = "mani";
                 return $http({
                     method:'POST',
-                    url:'http://localhost/seedbase_git/seedbase/seedbase_ws?action=addUser',
-                    data:$('#userForm').serialize(),
+                    url:'http://localhost/seedbase_git/seedbase/seedbase_ws',
+                    data: "Username="+username,                    
                     headers:{
-                        'Authorization':hash                       
+                        'Authorization':hash,
+                        'Content-Type': 'application/x-www-form-urlencoded'
                     },
                     async : false
                 })
